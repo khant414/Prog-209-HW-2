@@ -1,0 +1,43 @@
+#page1{
+    background-image: linear-gradient(to right, red , yellow);
+    color: orange;
+    font-family: 'Courier New', Courier, monospace;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 20px;
+    
+}
+
+#page2{
+    background-image: linear-gradient(to right, rgb(200, 255, 0) , rgb(60, 3, 151));
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    display: none;
+    padding: 20px;
+    
+}
+#button2 {
+    background: red;
+    border-radius: 20%;
+    color: white;
+    width: 70px;
+    height: 30px;
+    border : 2px solid white;
+
+}
+#button1 {
+    background: blue;
+    border-radius: 20%;
+    color: white;
+    width: 70px;
+    height: 30px;
+    border : 2px solid white;
+
+}
+
+li {
+    color: white;
+    width: 100px;
+    height: 100px;
+    background: rgb(38, 0, 255);
+    transition: width 2s, height 2s, transform 2s;
+}

@@ -1,13 +1,13 @@
 
  let words = [];
         for(let i = 0; i < 3; i++) {
-            let word = prompt("Enter the word");
+            let word = prompt("Enter Your 3 Words");
             words[i] = word;
         }
         //looping through each word
         let ul = document.createElement("ul");
         for(let word of words) {
-            var li = document.createElement("li");
+            let li = document.createElement("li");
             li.innerText = word;
             ul.appendChild(li)
         }
@@ -33,7 +33,7 @@
         //looping through each newly created list
         ul = document.createElement("ul");
         for(let word of wordSwapedArray) {
-            var li = document.createElement("li");
+            let li = document.createElement("li");
             li.innerText = word;
             ul.appendChild(li)
         }

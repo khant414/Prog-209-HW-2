@@ -1,17 +1,17 @@
 
- let words = [];
+ let firstArray = [];
         for(let i = 0; i < 3; i++) {
-            let word = prompt("Enter Your 3 Words");
-            words[i] = word;
+            let word = prompt("Enter 3 Words, I'll swap the first & last character");
+            firstArray[i] = word;
         }
         //looping through each word
         let ul = document.createElement("ul");
-        for(let word of words) {
+        for(let word of firstArray) {
             let li = document.createElement("li");
             li.innerText = word;
             ul.appendChild(li)
         }
-        //adding the un-ordered list and button on page1
+        //ul and button on page1
         document.getElementById("page1").appendChild(ul);
         let button = document.createElement("button");
         button.innerHTML  = "Click";
@@ -19,14 +19,14 @@
         document.getElementById("page1").appendChild(button);
 
 
-        //creating the second array and its ui elements
-        let changedArray = words.map(function(word){
+        //creating 2nd array and ui elements
+        let changedArray = firstArray.map(function(word){
                 //splitting character array and swapping the first and last character in the array
-                let wordsInArray = word.split("");
-                let firstLetter = wordsInArray[0];
-                wordsInArray[0] = wordsInArray[wordsInArray.length - 1];
-                wordsInArray[word.length - 1] = firstLetter;
-                return wordsInArray.join("");
+                let charInArray = word.split("");
+                let firstLetter = charInArray[0];
+                charInArray[0] = charInArray[charInArray.length - 1];
+                charInArray[word.length - 1] = firstLetter;
+                return charInArray.join("");
 
         });
         
@@ -44,16 +44,17 @@
         document.getElementById("page2").appendChild(button);
 
 
-        //listener for state 1 button
+        //listener for 1st button
         document.getElementById("button1").addEventListener("click" , function(){           
-            //hiding the first section
+            //hiding page1
             document.getElementById("page1").style.display = "none";
             document.getElementById("page2").style.display = "block";
 
         });
 
-        //listener for State 2 Button 
+        //listener for 2nd Button 
         document.getElementById("button2").addEventListener("click" , function(){
+            //hiding page2
             document.getElementById("page2").style.display = "none";
             document.getElementById("page1").style.display = "block";
         });
